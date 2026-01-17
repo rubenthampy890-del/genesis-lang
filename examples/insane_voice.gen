@@ -1,0 +1,30 @@
+say "🚀 Starting Insane Voice Assistant..."
+
+# Load Python modules
+use python "platform"
+use python "os"
+
+# Define a function to speak
+to speak with text do
+    say "🗣️  Speaking: " plus text
+    # Use macOS 'say' command via Python bridge
+    # We construct the shell command: say "text"
+    set cmd to "say " plus '"' plus text plus '"'
+    call python os.system with cmd
+end
+
+# Get System Info
+set system_func to python platform.system
+set system to call system_func 
+say "Detected System: " plus system
+
+# Logic
+check system is "Darwin" then
+    please call speak with "Hello Master. I am Genesis."
+    call speak with "I am running on a Mac."
+    call speak with "I can control your system."
+otherwise
+    say "Not on a Mac, skipping voice."
+end
+
+say "✅ Voice test complete."

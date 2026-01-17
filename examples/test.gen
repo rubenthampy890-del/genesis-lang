@@ -1,0 +1,10 @@
+// This is a comment
+let x = 10;
+let y = 20;
+print x + y;
+
+if (x < y) {
+    print "x is smaller";
+} else {
+    print "x is not smaller";
+}

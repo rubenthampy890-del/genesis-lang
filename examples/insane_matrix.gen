@@ -1,0 +1,34 @@
+say "😎 Enter The Matrix..."
+
+use python "random"
+use python "time"
+use python "sys"
+
+# Matrix Rain Simulation
+set count to 0
+loop while count is less than 500 do
+    # Generate random number between 0 and 1
+    # random.random()
+    set r to call python random.random
+    
+    check r is less than 0.5 then
+        call python sys.stdout.write with "1 "
+    otherwise
+        call python sys.stdout.write with "0 "
+    end
+    
+    check r is greater than 0.9 then
+        call python sys.stdout.write with " "
+    end
+    
+    # Flush output to see it animate
+    call python sys.stdout.flush
+    
+    # Small delay (otherwise it's too fast)
+    call python time.sleep with 0.01
+    
+    update count to count plus 1
+end
+
+say ""
+say "🐰 Follow the white rabbit."

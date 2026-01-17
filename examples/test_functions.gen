@@ -1,0 +1,27 @@
+say "Testing Functions..."
+
+to greet with name do
+    say "Hello " plus name
+end
+
+call greet with "User"
+
+to add with a, b do
+    return a plus b
+end
+
+set result to call add with 10, 20
+say "10 + 20 is:"
+say result
+
+to factorial with n do
+    check n is 1 then
+        return 1
+    otherwise
+        set sub to call factorial with n minus 1
+        return n times sub
+    end
+end
+
+say "Factorial of 5:"
+say call factorial with 5

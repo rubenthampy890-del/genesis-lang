@@ -1,0 +1,18 @@
+# This is a natural language script
+set x to 10
+set y to 20
+say "Sum is:"
+say x plus y
+
+check x is less than y then
+    say "x is smaller than y"
+otherwise
+    say "x is bigger"
+end
+
+say "Looping:"
+set i to 0
+loop while i is less than 5 do
+    say i
+    update i to i plus 1
+end

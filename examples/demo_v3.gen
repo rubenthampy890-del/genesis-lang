@@ -1,0 +1,32 @@
+say "Genesis v3 Upgrade Test"
+
+# 1. Test Functions
+to greet with name do
+    say "Hello, " plus name
+end
+call greet with "Commander"
+
+# 2. Test Python Bridge - Math
+say "Loading Python Math..."
+use python "math"
+
+set pi to python math.pi
+say "Value of PI from Python:"
+say pi
+
+set radius to 5
+set area to pi times radius times radius
+say "Area of circle with radius 5:"
+say area
+
+# 3. Test Python Bridge - OS (System Power)
+say "Loading Python OS..."
+use python "os"
+
+set cwd to call python os.getcwd 
+say "Current Working Directory:"
+say cwd
+
+say "Listing files (via Python os.listdir):"
+set files to call python os.listdir with "."
+say files

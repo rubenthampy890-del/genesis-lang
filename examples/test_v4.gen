@@ -1,0 +1,24 @@
+say "Testing Genesis v4 (Natural English)"
+
+# 1. Noise Words
+# "please", "the", "basically", "just", "now" are ignored.
+please set the x to 10
+and now basically say the x
+
+# 2. Natural Phrasing
+# "to" is required by 'set', but 'the' is noise.
+# "set value to 100" -> Tokens: SET VALUE TO 100
+set the value to 100
+say "The value is:"
+say the value
+
+# 3. Flexible Alignment (Not strictly aligned)
+check the value is 100 then
+    say "It works!"
+    say "Indentation is not strict"
+    end
+
+# 4. Error Test (Uncomment to test specific error)
+# say call unknown_function with 10
+
+say "Done with v4 test."
