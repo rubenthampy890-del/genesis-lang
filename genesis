@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 "/Users/basilthampy/Music/antigravity/just fun/genesis/src/main.py" "$@"

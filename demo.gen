@@ -1,0 +1,13 @@
+say "Welcome to Genesis!"
+
+set number to 5
+set factorial to 1
+set i to 1
+
+loop while i is less than number plus 1 do
+    update factorial to factorial times i
+    update i to i plus 1
+end
+
+say "Factorial of 5 is:"
+say factorial
