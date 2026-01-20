@@ -14,6 +14,7 @@ class Lexer:
             "update": TokenType.UPDATE,
             "say": TokenType.SAY,
             "check": TokenType.CHECK,
+            "if": TokenType.CHECK, # Alias for natural syntax
             "then": TokenType.THEN,
             "otherwise": TokenType.OTHERWISE,
             "end": TokenType.END,
@@ -36,6 +37,12 @@ class Lexer:
             "use": TokenType.USE,
             "python": TokenType.PYTHON,
             "call": TokenType.CALL,
+            
+            # v5
+            "speak": TokenType.SPEAK,
+            "draw": TokenType.DRAW,
+            "ask": TokenType.ASK,
+
             "true": TokenType.TRUE,
             "false": TokenType.FALSE,
             "nothing": TokenType.NOTHING,

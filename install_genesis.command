@@ -10,8 +10,9 @@ BOLD='\033[1m'
 clear
 
 echo -e "${PINK}"
-echo "   > G E N E S I S"
-echo "   ==============="
+echo "   > G E N E S I S  (v5.0)"
+echo "   ======================="
+echo "   🤖 AI Powered | 🗣️ Voice | 🎨 Graphics"
 echo -e "${RESET}"
 
 # Install Dependencies
@@ -26,9 +27,11 @@ fi
 echo -e "${CYAN}   Welcome to the Future of Coding.${RESET}"
 echo -e "${CYAN}   Developed by ${BOLD}'rubenthampy'${RESET}"
 echo ""
-echo "   New Features in v4.1:"
-echo "   ✨ Intelligent Autocomplete"
-echo "   📂 built-in 'examples' menu"
+echo "   New Features in v5.0:"
+echo "   🧠 AI Inside ('ask' command)"
+echo "   🗣️ Native Voice ('speak' command)"
+echo "   🎨 Graphics Engine ('draw' command)"
+echo "   ✍️ Natural Syntax (Postfix 'if', 'times' loops)"
 echo "   ---------------------------------"
 echo ""
 
@@ -47,4 +50,4 @@ echo -e "${GREEN} Done!${RESET}"
 echo ""
 echo -e "${BOLD}   ✅ Installation Complete.${RESET}"
 echo ""
-echo "   How to start:\"\n   1. Close this window.\"\n   2. Open a new Terminal.\"\n   3. Type 'genesis' to start.\"\n"
+echo "   How to start:\"\\n   1. Close this window.\"\\n   2. Open a new Terminal.\"\\n   3. Type 'genesis' to start.\"\\n"

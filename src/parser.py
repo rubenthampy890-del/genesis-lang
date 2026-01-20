@@ -55,6 +55,28 @@ class Parser:
         return Function(name, parameters, body)
 
     def statement(self):
+        # 1. Parse the core statement (e.g. say "hi")
+        stmt = self.core_statement()
+        
+        # 2. Check for modifiers (Natural Syntax)
+        
+        # Postfix If: ... if x > 5
+        if self.match(TokenType.CHECK):
+            condition = self.expression()
+            stmt = If(condition, Block([stmt]), None)
+
+        # Postfix Times: ... 5 times
+        # We look for NUMBER then TIMES
+        if self.check(TokenType.NUMBER):
+            # Peek ahead to see if 'times' follows
+            if self.tokens[self.current + 1].type == TokenType.TIMES:
+                count = self.expression() # Consumes the number
+                self.consume(TokenType.TIMES, "Expect 'times' after number.")
+                stmt = Times(count, stmt)
+
+        return stmt
+
+    def core_statement(self):
         if self.match(TokenType.CHECK):
             return self.if_statement()
         if self.match(TokenType.LOOP):
@@ -65,8 +87,38 @@ class Parser:
             return self.return_statement()
         if self.match(TokenType.UPDATE):
             return self.assignment_statement()
+        
+        # v5 Statements
+        if self.match(TokenType.SPEAK):
+            return self.speak_statement()
+        if self.match(TokenType.DRAW):
+            return self.draw_statement()
+        if self.match(TokenType.ASK):
+            return self.ask_statement()
             
         return self.expression_statement()
+
+    def speak_statement(self):
+        expr = self.expression()
+        return Speak(expr)
+
+    def ask_statement(self):
+        expr = self.expression()
+        return Ask(expr)
+
+    def draw_statement(self):
+        # draw "circle" with 100
+        # draw "forward" with 50
+        command = self.expression() # Expects string or identifier usually
+        
+        args = []
+        if self.match(TokenType.WITH):
+             if not self.check(TokenType.EOF):
+                while True:
+                    args.append(self.expression())
+                    if not self.match(TokenType.COMMA): break
+        
+        return Draw(command, args)
 
     def return_statement(self):
         keyword = self.previous()

@@ -17,7 +17,9 @@ GENESIS_KEYWORDS = [
     'say', 'set', 'check', 'loop', 'while', 'is', 'less', 'greater', 'than', 
     'plus', 'minus', 'times', 'over', 'true', 'false', 'python', 'call', 
     'to', 'with', 'end', 'otherwise', 'please', 'just', 'basically', 'examples', 'exit',
-    'update', 'return', 'use', 'then', 'now'
+    'update', 'return', 'use', 'then', 'now',
+    # v5
+    'speak', 'draw', 'ask', 'if'
 ]
 
 COMPLETER = WordCompleter(GENESIS_KEYWORDS, ignore_case=True) if HAS_PROMPT_TOOLKIT else None

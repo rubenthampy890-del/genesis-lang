@@ -2,20 +2,23 @@
 > **The Programming Language for Humans.**  
 > *Developed by [rubenthampy](https://github.com/rubenthampy)*
 
-![Genesis Banner](https://img.shields.io/badge/GENESIS-v4.1-cyan?style=for-the-badge&logo=python) 
+![Genesis Banner](https://img.shields.io/badge/GENESIS-v5.0_AI_Edition-purple?style=for-the-badge&logo=openai) 
 ![License](https://img.shields.io/badge/License-MIT-pink?style=for-the-badge)
 
-Genesis is a revolutionary programming language designed to let you code as naturally as you speak. It ignores "noise words", forgives indentation mistakes, and connects seamlessly to the entire Python ecosystem.
+Genesis is a revolutionary programming language designed to let you code as naturally as you speak. It ignores "noise words", forgives indentation mistakes, and connects seamlessly to the entire Python ecosystem. **Now with built-in AI, Voice, and Graphics.**
 
 ---
 
-## ✨ Features
+## ✨ Features (v5)
 
-- **🗣️ Natural English Syntax**: Write `please set x to 10` or `just say x`. It understands you.
-- **🧠 Intelligent Autocomplete**: Built-in REPL with smart suggestions as you type.
-- **🐍 Python Power Bridge**: Use *any* Python library directly. `use python "math"` -> `call python math.pi`.
+- **🧠 AI Inside**: Ask the code anything. `ask "how do I loop?"` -> Real answers.
+- **🗣️ Native Voice**: Your code speaks. `speak "I am alive"`
+- **🎨 Graphics Engine**: Draw easily. `draw "circle" with 100`
+- **📝 Natural Syntax**:
+    - `say "Hi" if true` (Postfix logic)
+    - `say "Loop" 5 times` (Repetition)
+- **🐍 Python Power Bridge**: Use *any* Python library directly.
 - **❌ Friendly Errors**: No stack traces. Just clear, human-readable feedback.
-- **📁 Built-in Examples**: Type `examples` in the shell to run demos like Matrix Rain or Voice Assistant.
 
 ---
 
